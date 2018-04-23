@@ -75,4 +75,6 @@ Notes for Stephen Grider's course on [Udemy](https://www.udemy.com/node-with-rea
 }
 ```
 
-4.  Create .gitignore
+4.  Create `.gitignore`
+5.  Install Heroku CLI (https://devcenter.heroku.com/articles/heroku-cli)
+6.  Push to remote heroku branch (https://devcenter.heroku.com/articles/git)
