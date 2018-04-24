@@ -4,9 +4,11 @@ Notes for Stephen Grider's course on [Udemy](https://www.udemy.com/node-with-rea
 
 ## Table of Contents
 
-* [Stack](#Stack)
+* [Stack](#stack)
 * [App Flow](#app-flow)
 * [Deployment Checklist](#deployment-checklist)
+* [Google OAuth](#oauth)
+* [Mongo Db](#mongodb)
 
 ## Stack
 
@@ -78,3 +80,60 @@ Notes for Stephen Grider's course on [Udemy](https://www.udemy.com/node-with-rea
 4.  Create `.gitignore`
 5.  Install Heroku CLI (https://devcenter.heroku.com/articles/heroku-cli)
 6.  Push to remote heroku branch (https://devcenter.heroku.com/articles/git)
+
+## OAuth
+
+### Key concepts about authentication
+
+* HTTP is stateless
+
+![http stateless](./notes-assets/http-stateless.png)
+
+* Cookie-based authentication
+
+![cookies](./notes-assets/cookies.png)
+
+* Signing in users flow with OAuth
+  1.  Attempt to authorize for the 1st time
+  2.  Google Servers: Give consent
+  3.  Back in the app: Look in the database for user.id. Exists ? yes, you're user x. Does not exist ? Let's create a record for the user
+
+![initial oauth flow](./notes-assets/outh-flow-db.png)
+
+### Basic OAuth Flow
+
+![initial oauth flow](./notes-assets/oauth-flow.png)
+
+### Oauth Flow with PassportJS
+
+1.  Passport
+    General helpers
+2.  Strategies
+    Specific helpers(google, facebook, local etc)
+
+![oauth flow passport](./notes-assets/oauth-passport.png)
+
+### Authorized Redirect UI's
+
+1.  Client: Go to `/auth/route`
+2.  Server: There's a `auth/route` handler!
+3.  Server: Pass to Google with secret, id and callback url
+4.  Google Server: This callback url I just received, is it verified ? (Set up in Google dev console)
+
+### Callback Information from Google OAuth
+
+Callback receives several parameters:
+
+1.  Access Token: with this we are able to access JUST what the user agreed to
+2.  Refresh token: Access token expires after some amount of time. So with this we can get a new one if needed
+3.  Profile: Actual user's data
+
+## MongoDB
+
+### Mongo Collections
+
+![mongo collections](./notes-assets/mongo-collections.png)
+
+### MongoDB vs JSWorld
+
+![mongoose collections](./notes-assets/mongoose-collections.png)
