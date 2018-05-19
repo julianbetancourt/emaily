@@ -128,6 +128,11 @@ Callback receives several parameters:
 2.  Refresh token: Access token expires after some amount of time. So with this we can get a new one if needed
 3.  Profile: Actual user's data
 
+
+### Serializing and Deserializing users
+
+![serialize passport](./notes-assets/serialize-deserialize.png)
+
 ## MongoDB
 
 ### Mongo Collections
