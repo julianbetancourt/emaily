@@ -9,6 +9,7 @@ Notes for Stephen Grider's course on [Udemy](https://www.udemy.com/node-with-rea
 * [Deployment Checklist](#deployment-checklist)
 * [Google OAuth](#oauth)
 * [Mongo Db](#mongodb)
+* [Dev vs Prod environments](#dev-prod-keys)
 
 ## Stack
 
@@ -128,7 +129,6 @@ Callback receives several parameters:
 2.  Refresh token: Access token expires after some amount of time. So with this we can get a new one if needed
 3.  Profile: Actual user's data
 
-
 ### Serializing and Deserializing users
 
 ![serialize passport](./notes-assets/serialize-deserialize.png)
@@ -142,3 +142,10 @@ Callback receives several parameters:
 ### MongoDB vs JSWorld
 
 ![mongoose collections](./notes-assets/mongoose-collections.png)
+
+## Dev Prod Keys
+
+* Dev keys for development environment. Production keys for Cloud provider.
+* With this approach we can have 2 separate mongo databases.
+
+![prod vs dev keys](./notes/assets/prod-vs-dev-keys.png)
