@@ -10,6 +10,7 @@ Notes for Stephen Grider's course on [Udemy](https://www.udemy.com/node-with-rea
 * [Google OAuth](#oauth)
 * [Mongo Db](#mongodb)
 * [Dev vs Prod environments](#dev-prod-keys)
+* [Prod vs Dev architectures](#prod-vs-dev-architectures)
 
 ## Stack
 
@@ -148,4 +149,10 @@ Callback receives several parameters:
 * Dev keys for development environment. Production keys for Cloud provider.
 * With this approach we can have 2 separate mongo databases.
 
-![prod vs dev keys](./notes/assets/prod-vs-dev-keys.png)
+![prod vs dev keys](./notes-assets/prod-vs-dev-keys.png)
+
+## Prod vs Dev Architectures
+
+![dev architecture](./notes-assets/architecture-dev.png)
+
+![prod architecture](./notes-assets/architecture-prod.png)
