@@ -9,8 +9,6 @@ import Landing from './Landing'
 const Dashboard = () => <h2>Dashboard</h2>
 const SurveyNew = () => <h2>SurveyNew</h2>
 
-console.log(actions.fetchUser)
-
 class App extends Component {
   componentDidMount() {
     this.props.fetchUser()
